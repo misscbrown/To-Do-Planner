@@ -26,3 +26,25 @@ $(".btn").on("click", function () {
   //set current day and time at top of screen
 var currentDate = moment().format("dddd MMM Do YYYY, h:mm a ");
 $("#currentDay").append(currentDate)
+
+// function for changing colour according to past, present and future
+function currentTime() {
+    var currentHour = moment().hours();
+  
+    $(".input-group").each(function () {
+  
+      var plannerTime = parseInt($(this).attr("id"));
+  
+      if (plannerTime < currentHour) {
+        $(this).addClass("past");
+      } else if (plannerTime === currentHour) {
+        $(this).addClass("present");
+      } else {
+        $(this).addClass("future");
+      }
+    });
+  }
+  
+  var timeCheckInterval = setInterval(currentTime, 20000);
+  
+  currentTime();
