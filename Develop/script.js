@@ -22,3 +22,7 @@ $(".btn").on("click", function () {
       output.textContent = localStorage.getItem("content");
     }
   }
+
+  //set current day and time at top of screen
+var currentDate = moment().format("dddd MMM Do YYYY, h:mm a ");
+$("#currentDay").append(currentDate)
