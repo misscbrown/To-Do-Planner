@@ -70,4 +70,21 @@ body {
     color: white;
   }
 
+
+.btn i:hover {
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+  }
   
+  .btn {
+    color: #a74697;
+    background-color: #fce9f7;
+  }
+  
+  .lead {
+    color: #a74697;
+  }
+  
+  .time {
+    color: #680368;
+  }
